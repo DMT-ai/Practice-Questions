@@ -158,7 +158,7 @@ function loadQuestion() {
 
 function startTimer() {
     clearInterval(timerInterval);
-    timeLeft = 10;
+    timeLeft = 20;
     updateTimerUI();
     
     timerInterval = setInterval(() => {
