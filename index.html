@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kỹ Năng Làm Việc Nhóm Hiệu Quả</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="glass-panel">
+                <div class="logo-icon">🚀</div>
+                <h1>Kỹ Năng Làm Việc Nhóm<br><span class="highlight">Hiệu Quả</span></h1>
+                <p style="margin-top: 1rem; color: #cbd5e1;">Khám phá cách xây dựng đội nhóm vững mạnh dựa trên Mô hình 5 Rào Cản của Lencioni.</p>
+                <div class="end-actions">
+                    <button id="btn-start" class="btn-primary">Bắt Đầu Thử Thách</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <header>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <div class="status-bar">
+                    <span id="question-counter">Câu 1 / 10</span>
+                    <span id="timer-display">⏳ 10s</span>
+                    <span id="score-display">Điểm: 0</span>
+                </div>
+            </header>
+
+            <main class="game-container">
+                <div class="left-panel glass-panel">
+                    <h3>Mô Hình Lencioni</h3>
+                    <p class="instruction-text" style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem; text-align: center;">Bước 1: Chọn tầng rào cản tương ứng</p>
+                    <div id="pyramid">
+                        <div class="pyramid-level" data-level="5"><span class="level-text">Thiếu chú ý đến kết quả</span></div>
+                        <div class="pyramid-level" data-level="4"><span class="level-text">Tránh né trách nhiệm</span></div>
+                        <div class="pyramid-level" data-level="3"><span class="level-text">Thiếu cam kết</span></div>
+                        <div class="pyramid-level" data-level="2"><span class="level-text">Nỗi sợ xung đột</span></div>
+                        <div class="pyramid-level" data-level="1"><span class="level-text">Thiếu lòng tin</span></div>
+                    </div>
+                </div>
+
+                <div class="right-panel glass-panel">
+                    <div class="question-header">
+                        <span class="difficulty-badge" id="difficulty-badge">Dễ</span>
+                        <h2 id="situation-text">Đang tải tình huống...</h2>
+                    </div>
+
+                    <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Bước 2: Chọn giải pháp khắc phục</p>
+                    <div id="answers-container">
+                        <!-- Đáp án render tự động -->
+                    </div>
+
+                    <div class="action-footer">
+                        <button id="btn-submit" class="btn-primary" disabled>Xác Nhận</button>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Feedback Modal -->
+            <div id="feedback-modal" class="modal">
+                <div class="modal-content glass-panel">
+                    <div id="feedback-icon" class="feedback-icon">✅</div>
+                    <h2 id="feedback-title">Chính xác!</h2>
+                    <div class="feedback-details" id="feedback-text" style="font-size: 1rem; line-height: 1.5; color: #cbd5e1; text-align: left;">
+                        <!-- JS injected -->
+                    </div>
+                    <button id="btn-next" class="btn-primary" style="width: 100%; margin-top: 1rem;">Tiếp Tục</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="screen">
+            <div class="glass-panel">
+                <div class="logo-icon">🏆</div>
+                <h1>Hoàn Thành Xuất Sắc!</h1>
+                <p>Tổng điểm của bạn:</p>
+                <div class="final-score" id="final-score">0 / 200</div>
+                <div id="final-message" class="final-message">Bạn có tiềm năng trở thành leader tuyệt vời!</div>
+                <div class="end-actions">
+                    <button id="btn-restart" class="btn-primary">Chơi Lại (Bộ KH mới)</button>
+                    <button id="btn-exit" class="btn-secondary">Thoát</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
