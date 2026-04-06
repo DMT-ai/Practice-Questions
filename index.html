@@ -11,13 +11,13 @@
     <div id="app">
         <!-- Start Screen -->
         <div id="start-screen" class="screen active">
-            <div class="glass-panel">
-                <div class="logo-icon">🚀</div>
-                <h1>Kỹ Năng Làm Việc Nhóm<br><span class="highlight">Hiệu Quả</span></h1>
-                <p style="margin-top: 1rem; color: #cbd5e1;">Khám phá cách xây dựng đội nhóm vững mạnh dựa trên Mô hình 5 Rào Cản của Lencioni.</p>
-                <div class="end-actions">
-                    <button id="btn-start" class="btn-primary">Bắt Đầu Thử Thách</button>
+            <div class="glass-panel" id="start-panel" style="position: relative;">
+                <h1 id="main-title">Kỹ Năng Làm Việc Nhóm<br><span class="highlight">Hiệu Quả</span></h1>
+                <p style="margin-top: 1rem; color: #cbd5e1; margin-bottom: 2rem;">Khám phá cách xây dựng đội nhóm vững mạnh dựa trên Mô hình 5 Rào Cản của Lencioni.</p>
+                <div class="end-actions" style="justify-content: center; margin-bottom: 1rem;">
+                    <div id="rocket-start" class="rocket-btn" title="Bắt đầu">🚀</div>
                 </div>
+                <p class="pulse-text" style="margin-top: 0.5rem; font-size: 0.9rem; color: #94a3b8;">Nhấp vào tên lửa để cất cánh</p>
             </div>
         </div>
 
@@ -92,6 +92,6 @@
             </div>
         </div>
     </div>
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
