@@ -52,7 +52,6 @@ const questionCounter = document.getElementById("question-counter");
 const scoreDisplay = document.getElementById("score-display");
 const timerDisplay = document.getElementById("timer-display");
 const pyramidLevels = document.querySelectorAll(".pyramid-level");
-const difficultyBadge = document.getElementById("difficulty-badge");
 const situationText = document.getElementById("situation-text");
 const answersContainer = document.getElementById("answers-container");
 const btnSubmit = document.getElementById("btn-submit");
@@ -120,6 +119,12 @@ function loadQuestion() {
     selectedOption = null;
     btnSubmit.disabled = true;
     
+    const step2Container = document.getElementById("step-2-container");
+    if (step2Container) {
+        step2Container.style.display = "none";
+        step2Container.style.opacity = "0";
+    }
+
     pyramidLevels.forEach(lvl => lvl.classList.remove("selected"));
     
     const q = currentQuestions[currentQuestionIndex];
@@ -128,8 +133,6 @@ function loadQuestion() {
     questionCounter.innerText = `Câu ${currentQuestionIndex + 1} / 10`;
     scoreDisplay.innerText = `Điểm: ${score}`;
     
-    difficultyBadge.innerText = q.difficulty;
-    difficultyBadge.className = `difficulty-badge ${q.difficulty}`;
     situationText.innerText = q.situation;
     
     let shuffledOptions = shuffleArray(q.options);
@@ -182,6 +185,13 @@ pyramidLevels.forEach(lvl => {
         pyramidLevels.forEach(l => l.classList.remove("selected"));
         this.classList.add("selected");
         selectedLevel = parseInt(this.dataset.level);
+        
+        const step2Container = document.getElementById("step-2-container");
+        if (step2Container && step2Container.style.display === "none") {
+            step2Container.style.display = "block";
+            setTimeout(() => step2Container.style.opacity = "1", 50);
+        }
+        
         checkEnableSubmit();
     });
 });

@@ -49,17 +49,18 @@
 
                 <div class="right-panel glass-panel">
                     <div class="question-header">
-                        <span class="difficulty-badge" id="difficulty-badge">Dễ</span>
                         <h2 id="situation-text">Đang tải tình huống...</h2>
                     </div>
 
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Bước 2: Chọn giải pháp khắc phục</p>
-                    <div id="answers-container">
-                        <!-- Đáp án render tự động -->
-                    </div>
+                    <div id="step-2-container" style="display: none; opacity: 0; transition: opacity 0.5s;">
+                        <p style="font-size: 0.95rem; color: #94a3b8; margin-bottom: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">Bước 2: Chọn giải pháp khắc phục</p>
+                        <div id="answers-container">
+                            <!-- Đáp án render tự động -->
+                        </div>
 
-                    <div class="action-footer">
-                        <button id="btn-submit" class="btn-primary" disabled>Xác Nhận</button>
+                        <div class="action-footer">
+                            <button id="btn-submit" class="btn-primary" disabled>Xác Nhận</button>
+                        </div>
                     </div>
                 </div>
             </main>
